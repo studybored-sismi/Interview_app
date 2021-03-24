@@ -10,7 +10,7 @@ const OrderConfirm= ({navigation}) => {
         <View style={styles.view5}>
             <Icon name="check-outline" size={30} style={styles.icon}></Icon>
             <Text style={styles.order}>ORDER CONFIRMED</Text>
-            <Text style={styles.text1} onPress={() => navigation.navigate("ActiveOrder2")}>Taking you to next time...</Text>
+            <Text style={styles.text1} onPress={() => navigation.navigate("EarningDetails")}>Taking you to next time...</Text>
         </View>
 
         </View>
