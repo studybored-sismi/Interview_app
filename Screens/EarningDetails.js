@@ -1,13 +1,18 @@
 import {  View,Text,StyleSheet,ScrollView} from 'react-native';
 import { Collapse, CollapseHeader, CollapseBody } from "accordion-collapse-react-native";
-import { Thumbnail, List, ListItem, Separator } from 'native-base';
+
 import React,{useState} from 'react';
+import { List } from 'react-native-paper';
 import Icons from 'react-native-vector-icons/Ionicons';
 import Icon1 from 'react-native-vector-icons/AntDesign';
 import Icon2 from 'react-native-vector-icons/AntDesign';
 import Icon3 from 'react-native-vector-icons/AntDesign';
 
 const EarningDetails = () =>{
+
+        const [expanded, setExpanded] = React.useState(true);
+
+        const handlePress = () => setExpanded(!expanded);
         return(
             
 <ScrollView showsVerticalScrollIndicator={false}>
@@ -70,14 +75,21 @@ const EarningDetails = () =>{
                     color:"#696969"}}>COD</Text>
             </View>
             </View>
-                        <Collapse>
+        <Collapse>
        
       <CollapseHeader>
         
       <View style={{flexDirection:'row'}}>
             <Text style={{marginTop:25,marginLeft:60,fontSize:18,color:"#696969",fontFamily:"OpenSansSemiBold",}}>Wed, 20 Feb  </Text>
             <Text style={{marginTop:25,marginLeft:30,fontSize:18,color:"#696969",fontFamily:"OpenSansSemiBold",}}>Rs. 317</Text>
-            <Icon3 name="up" size={20} style={{marginLeft:20,marginTop:25,color:"#FDC913"}}></Icon3>
+            <Icon3 name="up" size={20} style={{marginLeft:20,marginTop:25,color:"#FDC913"}}  expanded={expanded}
+        onPress={handlePress}></Icon3>
+         <List.Accordion
+        title="Wed, 20 Feb Rs. 317"
+        left={props => <List.Icon {...props} />}
+        expanded={expanded}
+        onPress={handlePress} />
+         
             </View>
        
       </CollapseHeader>
@@ -98,9 +110,7 @@ const EarningDetails = () =>{
                     color:"#696969"}}>Delivered</Text>
             </View>
             </View>
-       
 
-    
                 <View style={styles.View1}>
                 <View style={{flexDirection:'row'}}>
           <Text style={{marginLeft:20,marginTop:20,fontFamily:"OpenSansRegular",

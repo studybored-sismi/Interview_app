@@ -30,7 +30,7 @@ export default class Minute extends Component{
         
       </View>
       <Text style={styles.Done}
-     onPress={()=>this.props.navigation.navigate("OrderConfirm")} >Done</Text>
+     onPress={()=>this.props.navigation.navigate("Help")} >Done</Text>
     </View>
   );
 }
