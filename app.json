@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Restaurant_app",
-    "slug": "Restaurant_app",
+    "name": "Interview_app",
+    "slug": "Interview_app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -16,15 +16,15 @@
     "assetBundlePatterns": [
       "**/*"
     ],
+    "android": {
+      "package": "com.task.interview_app",
+      "versionCode": 1
+    },
     "ios": {
       "supportsTablet": true
     },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      }
-    },
+   
+    
     "web": {
       "favicon": "./assets/favicon.png"
     }
